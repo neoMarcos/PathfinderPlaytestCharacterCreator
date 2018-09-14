@@ -200,6 +200,7 @@
     <Content Include="Lists\Formats\ClassFormat.js" />
     <Content Include="Lists\Formats\FeatFormat.js" />
     <Content Include="Lists\Formats\SpellFormat.js" />
+    <Content Include="Lists\PanelModels.js" />
     <Content Include="Lists\SpellList.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

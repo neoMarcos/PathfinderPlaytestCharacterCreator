@@ -6,10 +6,10 @@
 	<div class="row">
 		<div class="col-md-2">
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a data-toggle="tab" href="#tabAncestry">Ancestry</a></li>
-				<li><a data-toggle="tab" href="#tabBackgroung">Backgroung</a></li>
-				<li><a data-toggle="tab" href="#tabClass">Class</a></li>
-				<li><a data-toggle="tab" href="#tabAbilityScores">Ability Scores</a></li>
+				<li class="active"><a data-toggle="pill" href="#tabAncestry">Ancestry</a></li>
+				<li><a data-toggle="pill" href="#tabBackgroung">Backgroung</a></li>
+				<li><a data-toggle="pill" href="#tabClass">Class</a></li>
+				<li><a data-toggle="pill" href="#tabAbilityScores">Ability Scores</a></li>
 			</ul>
 		</div>
 		<div class="col-md-10 tab-content">
@@ -18,10 +18,10 @@
 				<p>Your character’s heritage determines which of the world’s many peoples she calls her own, whether it’s diverse humans, insular but vivacious elves, traditionalist and family-focused dwarves, or any of the other groups of people that call Golarion home. Both her heritage and her experiences as a youth might be key parts of her identity, and they likely shape how she sees the world and her place in it.</p>
 				<div>
 					<div class="col-md-2">
-						<ul name="menu" class="nav nav-pills nav-stacked">
+						<ul id="menuAncestry" class="nav nav-pills nav-stacked">
 						</ul>
 					</div>
-					<div name="mainPanel" class="col-md-10 tab-content">
+					<div id="mainAncestry" class="col-md-10 tab-content">
 					</div>
 				</div>
 			</div>
@@ -68,35 +68,77 @@
 	<script src="Lists/ClassList.js"></script>
 	<script src="Lists/FeatList.js"></script>
 	<script src="Lists/SpellList.js"></script>
+	<script src="Lists/PanelModels.js"></script>
 	<script type="text/javascript">
 
 		$(function () {
-			var Character;
 
-			var menuAncestry = $('#panelAncestry div#menu ul');
-			$.each(AncestryList, function () {
-				menuAncestry.append('<li><input type="radio" id="radio' + this.Id + '" /><a data-toggle="pill" href="#panel' + this.Id + '" thisId="' + this.Id + '">' + this.Name + '</a></li>');
-				menuAncestry.find('a:last').click(buildAncestryPanel);
+			var steps = [
+				"Ancestry",
+				//"Background",
+				//"Class"
+			];
+
+			var Lists = {
+				Ancestry: AncestryList,
+				Background: BackgroundList,
+				Class: ClassList
+			};
+
+			var PageModels = {
+				Ancestry: getAncestryPage,
+				Background: getBackgroundPage,
+				Class: getClassPage
+			};
+
+			var OptionSelectedHandlers = {
+				Ancestry: AncestrySelectedHandler,
+				Background: BackgroundSelectedHandler,
+				Class: ClassSelectedHandler
+			}
+
+			//Iterates through a list of strings, one for each tab;
+			$.each(steps, function (index, step) {
+				//gets the tab's menu where to add new options;
+				var menu = $('#menu' + step);
+
+				//iterates through all tab's objects;
+				$.each(Lists[step], function (index, obj) {
+					//creates a tab for the object in the menu;
+					menu.append('<li><a data-toggle="pill" href="#panel' + step + obj.Id + '" step="' + step + '" objid="' + obj.Id + '">' + obj.Name + '</a></li>');
+					//adds click handler to the tab, which loads the tab's content if it did't yet do it;
+					menu.find('a:last').click(buildPanel);
+				});
+				//$('#menu' + step + ' a:first').addClass("active").click();
 			});
-			$("#panelAncestry div#menu ul li:first").addClass("active").click();
 
-			function buildAncestryPanel(e) {
-				var id = e.target.attributes['thisId'].value;
-				if (!$('#panel' + id)[0]) {
-					var ancestry = AncestryList.findById(id); //Relatorios.buscarRelatorio(id);
-					var panel = $('#panelAncestry'); 
-					var main = panel.find('#mainPanel');
-					main.append(
-						'<div id="panel' + id + '" class="tab-pane fade" style="margin:5px">' +
-						'<h3 align="center">' + rel.Nome + '</h2>' +
-						'<p>' + rel.Descricao + '</p>' +
-						'<span id="details">HIT POINTS ' + ancestry.HitPoints + ' | SIZE ' + ancestry.Size + ' | SPEED ' + ancestry.Speed + ' feet</span>' +
-						'<fieldset class="painelFiltros" />' +
-						'<hr><button type="button" class="btn btn-primary" idrel="' + id + '">Gerar relatório</button>' +
-						'</div>');
-					panel.find('#radio' + this.Id).click(selectAncestry);
-					doAjax('RelatoriosBS.aspx/RecuperarFiltros', { "idRelatorio": id }, montarFiltros, falha);
+			function buildPanel(e) {
+				//gets the object's Id;
+				var id = e.target.attributes['objid'].value;
+				//gets the step`s name;
+				var step = e.target.attributes['step'].value;
+
+				//if the panel has not been created, it creates it;
+				if (id && step && !$('#panel' + step + id)[0]) {
+					// gets the object;
+					var obj = Lists[step][id];
+					//adds a new panel using the corresponding model and the object that will fill it up;
+					$('#main' + step).append(PageModels[step](obj));
+					//adds select handler to the radio button;
+					$('#button' + step + id).click(obj, OptionSelectedHandlers[step]);
 				}
+			}
+
+			function AncestrySelectedHandler(a) {
+
+			}
+
+			function BackgroundSelectedHandler(b) {
+
+			}
+
+			function ClassSelectedHandler(c) {
+
 			}
 
 			//function montarFiltros(retorno) {

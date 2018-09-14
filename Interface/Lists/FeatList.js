@@ -1,4 +1,27 @@
 ﻿var FeatList = [
+	//Dwarf
+	{
+		Name: "Ancestral Hatred",
+		Type: "Feat",
+		Level: 1,
+		Traits: ["Dwarf"],
+		Description:
+			"<p>You have shaped your hatred of ancestral dwarven foes into a powerful weapon.Choose two of the following creature traits: derro, duergar, giant, or orc.You gain a + 1 circumstance bonus to damage rolls against creatures with one of the chosen traits.If a creature with a chosen trait critically succeeds at an attack against you, this bonus increases to + 4 against that creature for 1 minute.</p>",
+		Special: "<p>Your GM can add appropriate creature traits to this list if your character is from a community that commonly fights other types of enemies.</p>",
+		BookPage: ["RB",25],
+	},
+	{
+		Name: "Ancient's Blood",
+		Type: "Feat",
+		Level: 1,
+		Traits: ["Dwarf", "Heritage"],
+		Trigger: "You attempt a saving throw against a magical effect.",
+		Description:
+			"<p>Your ancestors’ innate resistance to magic has manifested in you. You gain a +2 circumstance bonus to the triggering saving throw.</p>",
+		Special: "<p>Your resistance hampers your connection to magic items. Reduce your total Resonance Points by 2(minimum 0).For more information about Resonance Points, see page 376.</p>",
+		BookPage: ["RB", 25],
+	},
+
 	// Alchemist
 	{
 		Name: "Alchemical Familiar",
@@ -7,6 +30,7 @@
 		Traits: ["Alchemist"],
 		Description:
 			"<p>You have created life via alchemy, though only a simple creature formed from alchemical materials and a bit of your own blood.This alchemical familiar assists you in your laboratory and adventuring, like any other familiar(see Familiars on page 287 for more information).</p>",
+		BookPage: ["RB", 48],
 	},
 	{
 		Name: "Alchemical Savant",
@@ -15,6 +39,7 @@
 		Traits: ["Alchemist"],
 		Description:
 			"<p>You can identify alchemical items quickly. When trained in the Arcana skill and attempting to use its Identify Magic action(see page 145) on an alchemical item you hold, you can do so as a single action with the concentrate and manipulate traits instead of taking an hour.If you have the formula for the item you are attempting to identify, you gain a +2 circumstance bonus to your check and treat any critical failures as failures instead.</p>",
+		BookPage: ["RB", 48],
 	},
 
 	// Barbarian
@@ -25,6 +50,7 @@
 		Traits: ["Barbarian"],
 		Description:
 			"<p>When you are raging, your visual senses improve, granting you low-light vision and darkvision.</p>",
+		BookPage: ["RB", 57],
 	},
 	{
 		Name: "Raging Intimidation",
@@ -33,6 +59,7 @@
 		Traits: ["Barbarian"],
 		Description:
 			"<p>While you are raging, any Demoralize action you use gains the rage trait. As soon as you meet the appropriate prerequisites of the skill feats Intimidating Glare and Scare to Death, you gain these feats.Scare to Death also gains the rage trait while you Rage.</p>",
+		BookPage: ["RB", 57],
 	},
 
 	// Bard
