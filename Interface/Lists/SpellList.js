@@ -1,6 +1,6 @@
-﻿var SpellList = [
-	{
-		Name: "ABERRANT WHISPERS",
+﻿var SpellList = {
+	AberrantWhispers: {
+		Name: "Aberrant Whispers",
 		Type: "Power",
 		Level: 3,
 		Casting: ["S", "V"],
@@ -13,4 +13,4 @@
 		CriticalFailure: "The target is confused.",
 		Traits: ["Auditory", "Enchantment", "Mental"]
 	}
-];
+};

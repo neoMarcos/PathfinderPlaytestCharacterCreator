@@ -9,7 +9,7 @@
 		SizeShort: "M",
 		Speed: 20,
 		AbilityBoosts: ["Constitution", "Wisdom", "Free"],
-		AbilityFlaw: ["Charisma"],
+		AbilityFlaws: ["Charisma"],
 		Languages: ["Common", "Dwarf"],
 		BonusLanguages: {
 			Description: "At 1st level, if your Intelligence score is 14 or higher, you can also select one of the following languages: ",
@@ -34,7 +34,7 @@
 		SizeShort: "M",
 		Speed: 30,
 		AbilityBoosts: ["Dexterity", "Intelligence", "Free"],
-		AbilityFlaw: ["Constitution"],
+		AbilityFlaws: ["Constitution"],
 		Languages: ["Common", "Elven"],
 		BonusLanguages: {
 			Description: "At 1st level, if your Intelligence score is 14 or higher, you can also select one of the following languages: ",
@@ -60,7 +60,7 @@
 		SizeShort: "S",
 		Speed: 20,
 		AbilityBoosts: ["Constitution", "Charisma", "Free"],
-		AbilityFlaw: ["Strength"],
+		AbilityFlaws: ["Strength"],
 		Languages: ["Common", "Gnomish", "Sylvan"],
 		BonusLanguages: {
 			Description: "At 1st level, if your Intelligence score is 14 or higher, you can also select one of the following languages: ",
@@ -86,7 +86,7 @@
 		SizeShort: "S",
 		Speed: 25,
 		AbilityBoosts: ["Dexterity", "Charisma", "Free"],
-		AbilityFlaw: ["Wisdom"],
+		AbilityFlaws: ["Wisdom"],
 		Languages: ["Common", "Goblin"],
 		BonusLanguages: {
 			Description: "At 1st level, if your Intelligence score is 14 or higher, you can also select one of the following languages: ",
@@ -111,7 +111,7 @@
 		SizeShort: "S",
 		Speed: 25,
 		AbilityBoosts: ["Dexterity", "Wisdom", "Free"],
-		AbilityFlaw: ["Strength"],
+		AbilityFlaws: ["Strength"],
 		Languages: ["Common", "Halfling"],
 		BonusLanguages: {
 			Description: "At 1st level, if your Intelligence score is 14 or higher, you can also select one of the following languages: ",
@@ -137,7 +137,7 @@
 		SizeShort: "M",
 		Speed: 25,
 		AbilityBoosts: ["Free", "Free"],
-		AbilityFlaw: null,
+		AbilityFlaws: null,
 		Languages: ["Common", "One additional language, selected from those to which you have access"],
 		BonusLanguages: {
 			Description: "At 1st level, if your Intelligence score is 14 or higher, you can also select one of the languages from the list of common languages on page 40 or from other languages you have access to.",

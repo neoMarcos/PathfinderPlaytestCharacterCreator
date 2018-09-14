@@ -1,6 +1,6 @@
-﻿var FeatList = [
+﻿var FeatList = {
 	//Dwarf
-	{
+	AncestralHatred: {
 		Name: "Ancestral Hatred",
 		Type: "Feat",
 		Level: 1,
@@ -8,9 +8,9 @@
 		Description:
 			"<p>You have shaped your hatred of ancestral dwarven foes into a powerful weapon.Choose two of the following creature traits: derro, duergar, giant, or orc.You gain a + 1 circumstance bonus to damage rolls against creatures with one of the chosen traits.If a creature with a chosen trait critically succeeds at an attack against you, this bonus increases to + 4 against that creature for 1 minute.</p>",
 		Special: "<p>Your GM can add appropriate creature traits to this list if your character is from a community that commonly fights other types of enemies.</p>",
-		BookPage: ["RB",25],
+		BookPage: ["RB", 25],
 	},
-	{
+	AncientsBlood: {
 		Name: "Ancient's Blood",
 		Type: "Feat",
 		Level: 1,
@@ -23,7 +23,7 @@
 	},
 
 	// Alchemist
-	{
+	AlchemicalFamiliar: {
 		Name: "Alchemical Familiar",
 		Type: "Feat",
 		Level: 1,
@@ -32,7 +32,7 @@
 			"<p>You have created life via alchemy, though only a simple creature formed from alchemical materials and a bit of your own blood.This alchemical familiar assists you in your laboratory and adventuring, like any other familiar(see Familiars on page 287 for more information).</p>",
 		BookPage: ["RB", 48],
 	},
-	{
+	AlchemicalSavant: {
 		Name: "Alchemical Savant",
 		Type: "Feat",
 		Level: 1,
@@ -43,7 +43,7 @@
 	},
 
 	// Barbarian
-	{
+	AcuteVision: {
 		Name: "Acute Vision",
 		Type: "Feat",
 		Level: 1,
@@ -52,7 +52,7 @@
 			"<p>When you are raging, your visual senses improve, granting you low-light vision and darkvision.</p>",
 		BookPage: ["RB", 57],
 	},
-	{
+	RagingIntimidation: {
 		Name: "Raging Intimidation",
 		Type: "Feat",
 		Level: 1,
@@ -63,7 +63,7 @@
 	},
 
 	// Bard
-	{
+	BardicLore: {
 		Name: "Bardic Lore",
 		Type: "Feat",
 		Level: 1,
@@ -71,7 +71,7 @@
 		Description:
 			"<p>Your eclectic studies inform you on just about any topic. You are trained in Bardic Lore, a special lore skill that can be used only to Recall Knowledge, but can be used to Recall Knowledge on any topic.If you are legendary in Occultism, you become an expert in Bardic Lore, but you can’t increase your proficiency rank in Bardic Lore by any other means.</p>",
 	},
-	{
+	LingeringComposition: {
 		Name: "Lingering Composition",
 		Type: "Feat",
 		Level: 1,
@@ -81,7 +81,7 @@
 	},
 
 	// Cleric
-	{
+	CommunalHealing: {
 		Name: "Communal Healing",
 		Type: "Feat",
 		Level: 1,
@@ -89,7 +89,7 @@
 		Description:
 			"<p>You’re a conduit for positive energy, and as you channel it through you it heals some of your minor injuries.When you cast the heal spell to heal a single creature other than yourself, you regain Hit Points equal to the spell level of your heal spell.</p>",
 	},
-	{
+	DeadlySimplicity: {
 		Name: "Deadly Simplicity",
 		Type: "Feat",
 		Level: 1,
@@ -101,7 +101,7 @@
 	},
 
 	// Druid
-	{
+	AnimalCompanion: {
 		Name: "Animal Companion",
 		Type: "Feat",
 		Level: 1,
@@ -110,13 +110,13 @@
 			"<p>You gain the service of a young animal companion. This companion travels with you on your adventures, and it obeys any simple commands you give it to the best of its abilities.See the Animal Companion section on page 284 for more information about these creatures.</p>",
 		Special: "<p>If you are a druid of the animal order, your animal companion increases its Constitution, Wisdom, and Charisma modifiers by 1.</p>"
 	},
-	{
+	LeshyFamiliar: {
 		Name: "Leshy Familiar",
 		Type: "Feat",
 		Level: 1,
-		Traits: ["Druid","Leaf Order"],
+		Traits: ["Druid", "Leaf Order"],
 		Description:
 			"<p>You gain a leshy familiar, a Tiny plant that embodies one of the many spirits of nature.Other than taking the form of a plant instead of an animal, this familiar uses all the same rules as other familiars(see page 287 for more details about familiars).</p>",
 		Special: "<p>If you are a druid of the leaf order, your familiar has three powers instead of two.</p>"
 	},
-];
+};
