@@ -1,4 +1,4 @@
-var BackgroundList = [
+var BackgroundList = {
 	Acolyte: {
 		Name: "Acolyte",
 		Description: "You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your religion or because you cast away the teachings of your faith, but deep inside you’ll always carry the lessons you learned.",
@@ -125,4 +125,4 @@ var BackgroundList = [
 		Feat: "Quick Repair",
 		Skill: "Warfare Lore"
 	}
-];
+};
